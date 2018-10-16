@@ -5,15 +5,15 @@ Environment variables are used to generate the corresponding config files:
 
 - /usr/share/pgpool2/pcp.conf.gucci
 - /usr/share/pgpool2/pgpool.conf.gucci
-- /usr/share//pgpool2/pool_hba.conf.gucci
+- /usr/share/pgpool2/pool_hba.conf.gucci
 
 ## Usage
 ```bash
 $ docker run -d --name pgpool2 \
-         --env PGPOOL_BACKENDS=pg1:5432:5,pg2:5432:5,pg3:5432:5 \
+         -e PGPOOL_BACKENDS=pg1:5432:5,pg2:5432:5,pg3:5432:5 \
          --expose 5432 \
          --expose 9898 \
-         braydenjw/alpine-pgpool-docker
+         braydenjw/alpine-pgpool2-docker
 ```
 
 ## Environment Variables
